@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+
+    <th:block th:insert="~{parts/common :: title}"></th:block>
+
+</head>
+<body>
+<th:block th:insert="~{parts/navbar :: nav}"></th:block>
+
+<H1>ONLY FOR KONOHA</H1>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<form th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+<p>Click on<a th:href="@{/registration}">registration</a></p>
+</body>
+</html>

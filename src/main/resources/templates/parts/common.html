@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="title">
+    <title>NAAARUTO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div>
+    <th:block th:insert="~{navbar :: nav}"></th:block>
+</div>
+<div th:fragment="footer">
+    &copy; 2016 Footer
+</div>
+<div id="copy-section">
+    © 20231 The Good 2 Thymes Virtual Grocery
+</div>
+</body>
+</html>

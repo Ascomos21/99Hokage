@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+>
+<html>
+<head>
+    <title>Registration form</title>
+    <th:block th:insert="~{parts/common :: title}"></th:block>
+
+</head>
+<body>
+<form th:action="@{/registration}" method="post">
+    <th:block th:insert="~{parts/navbar :: nav}"></th:block>
+
+    <div><label>E-mail <input id="mail" type="email" name="email" class="menu" placeholder="E-mail" required=""></label>
+    </div>
+    <div><label> User Name : <input type="text" name="username" placeholder="Name"/> </label></div>
+    <div><label> Password: <input type="password" name="password" placeholder="Password"/> </label></div>
+    <div><label> Repeat Password: <input type="password" name="password123" placeholder="Password"/> </label></div>
+
+    <div class="button">
+        <button name="subject" type="submit">Sign in</button>
+    </div>
+
+
+</form>
+</body>
+</html>

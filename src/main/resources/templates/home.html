@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <th:block th:insert="~{parts/common :: title}"></th:block>
+
+</head>
+<body>
+<th:block th:insert="~{parts/navbar :: nav}"></th:block>
+
+<h1 align="center" >Welsscome!</h1>
+<p>Click on<a th:href="@{/main}">main</a></p>
+<!--Якщо  замість@{/hello}  писати @{/login} буде повертати на цю сторынку-->
+
+</body>
+</html>
